@@ -127,7 +127,7 @@ namespace Project3_EntityFrameworkStatistics
             lblActiveProductCount.Text = activeProductCount.ToString();
 
 
-            //Toplam Kola Stok SatışlarındN Kazanılan Para 
+            //Toplam Kola Stok Satışlarından Kazanılan Para 
             var colaStock= db.TblProduct . Where (x => x.ProductName == "Kola"). Select (y=>y.ProductStock).FirstOrDefault();
             var colaPrice = db.TblProduct.Where(x=>x.ProductName=="Kola").Select(y => y.ProductPrice)
                 .FirstOrDefault();
@@ -146,6 +146,7 @@ namespace Project3_EntityFrameworkStatistics
 
             var countryDifferentCount= db.TblCustomer.Select(x=>x.CustomerCountry ).Distinct().Count();
             lblCountryDifferentCount.Text = countryDifferentCount.ToString();
+             
 
         }
 
