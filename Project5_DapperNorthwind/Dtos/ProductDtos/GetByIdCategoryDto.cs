@@ -1,0 +1,22 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data.SqlTypes;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Project5_DapperNorthwind.Dtos.ProductDtos
+{
+    public class GetByIdCategoryDto
+    {
+        public int  ProductId { get; set; }
+
+        public string ProductName { get; set; }
+
+        public decimal UnitPrice { get; set; } //decimal money kısmı biraz sıkıntı çıkartabilir.
+
+        public int UnitsInStock { get; set; }
+
+        public int CategoryId { get;set; }
+    }
+}
